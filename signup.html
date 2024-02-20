@@ -20,8 +20,13 @@
         <input type="email" id="email" name="email" required><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
+        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+        <!-- The pattern attribute contains the regular expression for password validation -->
+        <!-- The title attribute provides a message to display when the pattern doesn't match -->
+        <!-- The required attribute ensures that the field is not empty -->
+        <!-- The regular expression ensures that the password contains at least one digit, one lowercase and one uppercase letter, and is at least eight characters long -->
+        
         <input type="submit" value="Sign Up">
     </form>
 </body>
